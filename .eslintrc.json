@@ -1,0 +1,44 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "google"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "camelcase":"off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "max-len": ["error", {
+            "code": 140,
+            "ignoreUrls": true,
+            "ignoreComments": true,
+            "ignorePattern": "^import\\s.+\\sfrom\\s.+;$"
+         }],
+        "@typescript-eslint/no-empty-function": ["error", {
+            "allow": ["constructors"]
+        }],
+        "@typescript-eslint/ban-types": "off",
+        "valid-jsdoc": ["error", {
+          "requireParamType": false,
+          "requireReturnType": false,
+          "requireReturnDescription": false
+        }],
+        "no-console": ["error"]
+    }
+}

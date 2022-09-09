@@ -2,10 +2,11 @@ const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// eslint-disable-next-line no-undef
 module.exports = {
   entry: path.join(__dirname, "src", "index.tsx"),
   output: {
-    path:path.resolve(__dirname, "dist"),
+    path:path.resolve(__dirname, "build"),
   },
   module: {
     rules: [
@@ -15,7 +16,7 @@ module.exports = {
         use: [{
           loader: 'babel-loader',
           options: {
-              presets: [
+            presets: [
                   [
                       '@babel/preset-env',
                       {

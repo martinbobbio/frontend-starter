@@ -30,7 +30,6 @@ const mainReducer = ({user, settings, app: {loading, page, theme}}:
 
 const AppContext = ({children}: {children: React.ReactNode}) => {
   const [state, dispatch] = React.useReducer(mainReducer, INITIAL_STATE);
-  console.log(state);
   const theme = state.app.theme[state.app.theme.current];
   return (
     <Context.Provider value={{state, dispatch, theme}}>

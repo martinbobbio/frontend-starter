@@ -1,5 +1,7 @@
 // React
 import React from 'react';
+// Style
+import withStyle from './Button.styled';
 
 // Component's props
 export interface Props {
@@ -29,4 +31,4 @@ const Button = ({children, className, onClick}: Props): React.ReactElement<Props
   );
 };
 
-export default React.memo(Button);
+export default React.memo(withStyle(Button));

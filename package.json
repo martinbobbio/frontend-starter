@@ -50,6 +50,9 @@
     "build": "webpack --mode production",
     "test": "jest"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",

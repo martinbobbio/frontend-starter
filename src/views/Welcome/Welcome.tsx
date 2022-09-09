@@ -3,6 +3,9 @@ import React from 'react';
 import {useNavigate} from 'react-router-dom';
 // Componetns
 import {Button} from '@components';
+// Style
+import withStyle from './Welcome.styled';
+
 
 // Component's props
 export interface Props {
@@ -27,4 +30,4 @@ const Welcome = ({className}: Props): React.ReactElement<Props> => {
   );
 };
 
-export default React.memo(Welcome);
+export default React.memo(withStyle(Welcome));

@@ -3,6 +3,8 @@ import React from 'react';
 import {useNavigate} from 'react-router-dom';
 // Componetns
 import {Button} from '@components';
+// Style
+import withStyle from './Home.styled';
 
 // Component's props
 export interface Props {
@@ -27,4 +29,4 @@ const Home = ({className}: Props): React.ReactElement<Props> => {
   );
 };
 
-export default React.memo(Home);
+export default React.memo(withStyle(Home));

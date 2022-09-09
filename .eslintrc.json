@@ -23,6 +23,7 @@
     ],
     "rules": {
         "camelcase":"off",
+        "linebreak-style": ["error", "windows"],
         "@typescript-eslint/no-explicit-any": "off",
         "max-len": ["error", {
             "code": 140,

@@ -48,7 +48,9 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
-    "test": "jest"
+    "test": "jest",
+    "lint": "npx eslint src --resolve-plugins-relative-to .",
+    "lint:fix": "npx eslint src --resolve-plugins-relative-to . --fix"
   },
   "pre-commit": [
     "lint"

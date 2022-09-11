@@ -1,7 +1,7 @@
 {
   "name": "frontend-starter",
   "version": "0.1.0",
-  "homepage": "https://github.com/martinbobbio/frontend-starter",
+  "homepage": " https://martinbobbio.github.io/frontend-starter",
   "private": true,
   "scripts": {
     "start": "webpack serve --mode development",

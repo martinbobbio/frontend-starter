@@ -24,7 +24,7 @@ const Home = ({className}: Props): React.ReactElement<Props> => {
 
   return (
     <div className={className}>
-      <Button onClick={():void => navigate('/')}>Home</Button>
+      <Button onClick={():void => navigate('/')}>Homex</Button>
     </div>
   );
 };

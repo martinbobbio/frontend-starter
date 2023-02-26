@@ -1,10 +1,9 @@
 /**
- * Parse an address like Ethereum Ropst...
+ * Function that parse an address like Ethereum Ropst...
  *
- * @method stringParse
  * @param value Value to parse
  * @param characters Characters
- * @return void
+ * @return string
 */
 export default (value: string | undefined, characters: number): string => {
   if (!value) return '';

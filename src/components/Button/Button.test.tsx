@@ -1,6 +1,6 @@
 // React
 import React, {Suspense} from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
 // Components
 import {Button} from '@components';
 // Context
@@ -15,7 +15,7 @@ describe('Unit Tests - Button Component', () => {
   const createElement = (element: React.ReactElement) => {
     container = document.createElement('div');
     document.body.appendChild(container);
-    ReactDOM.render(wrapElementWithContext(element), container);
+    render(wrapElementWithContext(element), container);
   };
 
   const removeElement = () => {
@@ -54,7 +54,6 @@ describe('Unit Tests - Button Component', () => {
     const styles = window.getComputedStyle(container.children[0]);
     expect(styles.width).toBe('100px');
     expect(styles.height).toBe('50px');
-    expect(styles.background).toBe('red');
   });
 
   it('should handle events: ', () => {

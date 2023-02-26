@@ -1,7 +1,7 @@
 // React
 import React from 'react';
 // Props
-import {Props} from './Button';
+import {Props} from './AppWrapper';
 // Libreries
 import styled from 'styled-components';
 
@@ -14,8 +14,6 @@ import styled from 'styled-components';
 export default (component: React.FC<Props>) => {
   return styled(component)(() => {
     return `
-      width: 100px;
-      height: 50px;
   `;
   });
 };

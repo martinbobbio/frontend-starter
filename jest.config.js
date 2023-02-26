@@ -32,5 +32,6 @@ module.exports = {
     '@types': '<rootDir>/src/types',
     '@utils': '<rootDir>/src/utils',
     '@constants': '<rootDir>/src/constants',
+    '@assets': '<rootDir>/src/assets',
   },
 };

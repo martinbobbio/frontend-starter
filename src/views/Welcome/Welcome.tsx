@@ -13,9 +13,10 @@ export interface Props {
 }
 
 /**
- * @function Welcome
- * @param object className for styled component
- * @return Functional component
+ * Functional component that render view welcome.
+ *
+ * @param className for style and adding classes.
+ * @return React.ReactElement <Welcome/>
  */
 const Welcome = ({className}: Props): React.ReactElement<Props> => {
   // Vars
@@ -25,7 +26,7 @@ const Welcome = ({className}: Props): React.ReactElement<Props> => {
 
   return (
     <div className={className}>
-      <Button onClick={():void => navigate('/home')}>Welcome</Button>
+      <Button className='bg-green-700 m-5' onClick={() => navigate('/home')}>Welcome</Button>
     </div>
   );
 };

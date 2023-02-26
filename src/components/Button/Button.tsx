@@ -11,9 +11,12 @@ export interface Props {
 }
 
 /**
- * @function Button
- * @param object className for styled component
- * @return Functional component with the button and redirect or logic
+ * Functional component that render component button.
+ *
+ * @param className for style and adding classes.
+ * @param children for render element.
+ * @param onClick for handle on click event.
+ * @return React.ReactElement <Button/>
  */
 const Button = ({children, className, onClick}: Props): React.ReactElement<Props> => {
   // Functions

@@ -6,8 +6,9 @@ import {Props} from './Home';
 import styled from 'styled-components';
 
 /**
- * @function default
- * @param component props props
+ * Function that add style to the component.
+ *
+ * @param component for apply styles.
  * @return Styled Component
  */
 export default (component: React.FC<Props>) => {

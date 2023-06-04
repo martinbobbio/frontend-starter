@@ -8,5 +8,16 @@
     "jsxSingleQuote": true,
     "jsxBracketSameLine": false,
     "arrowParens": "always",
-    "endOfLine": "auto"
+    "endOfLine": "auto",
+    "overrides": [
+      {
+        "files": "*styled.tsx",
+        "options": {
+          "parser": "typescript",
+          "plugins": [
+            "prettier-plugin-styled-components"
+          ]
+        }
+      }
+    ]
   }

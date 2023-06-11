@@ -1,6 +1,6 @@
 // Libreries
 import { styled } from 'styled-components';
 
-const AppStyled = styled.div``;
+const HomeStyled = styled.div``;
 
-export { AppStyled };
+export { HomeStyled };

@@ -1,14 +1,17 @@
+// React
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // Components
-import { Header, Main } from '@/components';
-// Styled components
-import { AppStyled } from './App.styled';
+import { Detail, Home, NotFound } from '@/views';
 
 function App() {
   return (
-    <AppStyled>
-      <Header />
-      <Main title='Frontend Starter' />
-    </AppStyled>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/detail/:id' element={<Detail />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

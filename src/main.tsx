@@ -5,22 +5,14 @@ import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 // Styles
 import GlobalStyles from './GlobalStyles.ts';
+// Constants
+import { CONFIG } from '@/constants';
 // Libreries
 import { ThemeProvider } from 'styled-components';
-import { MyTheme } from './vite-env';
-
-const theme: MyTheme = {
-  colors: {
-    primary: '#2196f3',
-    secondary: '#f50057',
-    white: '#ffffff',
-    black: '#000000',
-  },
-};
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={CONFIG.theme}>
       <GlobalStyles />
       <App />
     </ThemeProvider>

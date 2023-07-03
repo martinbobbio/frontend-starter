@@ -1,7 +1,7 @@
-// Assets
-import { brandingReact, brandingVite } from '@/assets';
 // Styled components
 import { HeaderStyled } from './Header.styled';
+// Libreries
+import { AppBar, Toolbar, Typography, Container, Button } from '@mui/material';
 
 /**
  * Functional component that render component Header.
@@ -11,12 +11,15 @@ import { HeaderStyled } from './Header.styled';
 const Header = () => {
   return (
     <HeaderStyled data-testid='header'>
-      <a href='https://vitejs.dev' target='_blank'>
-        <img src={brandingVite} className='logo' alt='Vite logo' />
-      </a>
-      <a href='https://react.dev' target='_blank'>
-        <img src={brandingReact} className='logo react' alt='React logo' />
-      </a>
+      <AppBar position='static' color='primary'>
+        <Container>
+          <Toolbar>
+            icon
+            <Typography variant='h6'>LOGO</Typography>
+            <Button>Page</Button>
+          </Toolbar>
+        </Container>
+      </AppBar>
     </HeaderStyled>
   );
 };

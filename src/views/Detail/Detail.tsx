@@ -1,6 +1,5 @@
 // React
 import { useParams } from 'react-router-dom';
-
 // Components
 import { Main } from '@/components';
 // Styled components

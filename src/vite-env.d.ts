@@ -17,6 +17,22 @@ interface MyTheme {
     black: {
       main: string;
     };
+    gray: {
+      main: string;
+    };
+    header: {
+      main: string;
+      border: string;
+    };
+    body: {
+      main: string;
+    };
+    card: {
+      main: string;
+    };
+    typhography: {
+      main: string;
+    };
   };
 }
 

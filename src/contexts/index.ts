@@ -1,1 +1,3 @@
-export { GlobalProvider } from './global/GlobalContext';
+// Global
+export { GlobalProvider, GlobalContext } from './global/GlobalContext';
+export type { GlobalState } from './global/GlobalState';

@@ -1,7 +1,8 @@
 // Libreries
 import { styled } from 'styled-components';
 
-const DisclaimerStyled = styled.div`
+export const DisclaimerStyled = styled.div`
+  padding: 64px 0 0 0;
   img {
     margin: 32px 16px;
     will-change: filter;
@@ -13,5 +14,3 @@ const DisclaimerStyled = styled.div`
     filter: drop-shadow(0 0 32px ${({ theme }) => theme.palette.primary.main});
   }
 `;
-
-export { DisclaimerStyled };

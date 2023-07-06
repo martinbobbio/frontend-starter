@@ -1,7 +1,5 @@
 /**
  * Hook that copy a text in the clipboard.
- *
- * @return React.ReactElement <Main/>
  */
 const useClipboard = (): { copyToClipboard: (text: string) => void } => {
   const copyToClipboard = (text: string) => {

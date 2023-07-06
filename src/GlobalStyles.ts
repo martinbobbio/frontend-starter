@@ -97,7 +97,6 @@ img {
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 
-  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
 

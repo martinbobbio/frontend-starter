@@ -1,12 +1,20 @@
 // React
 import { Link } from 'react-router-dom';
+// Components
+import { Icon, Text } from '..';
+// Constants
+import {
+  SupportedColors,
+  SupportedIconsAnimations,
+  SupportedSizes,
+} from '@/constants';
+// Hooks
+import { useCopyToClipboard } from '@/hooks';
 // Utils
 import { firstLetterUppercase } from '@/utils';
 // Styled components
-import { IconsContainer, MainStyled, Title } from './Main.styled';
-import { useCopyToClipboard } from '@/hooks';
+import { IconsContainer, MainStyled, TitleContainer } from './Main.styled';
 // Libreries
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGear,
   faCat,
@@ -16,8 +24,6 @@ import {
   fa4,
   fa0,
 } from '@fortawesome/free-solid-svg-icons';
-import { Typography } from '@mui/material';
-// Hooks
 
 // Component props
 interface MainProps {
@@ -25,7 +31,7 @@ interface MainProps {
 }
 
 /**
- * Functional component that render component Main.
+ * Functional component that render component main.
  *
  * @return React.ReactElement <Main/>
  */
@@ -33,29 +39,54 @@ function Main({ title }: MainProps) {
   const { copyToClipboard } = useCopyToClipboard();
 
   const icons = [
-    { icon: faGear, name: 'gear', animation: 'spin' },
-    { icon: faCat, name: 'cat', animation: 'bounce' },
-    { icon: faGhost, name: 'ghost', animation: 'flip' },
-    { icon: faSpinner, name: 'spinner', animation: 'spin' },
-    { icon: faLock, name: 'spinner', animation: 'shake' },
+    { icon: faGear, name: 'gear', animation: SupportedIconsAnimations.Spin },
+    { icon: faCat, name: 'cat', animation: SupportedIconsAnimations.Bounce },
+    { icon: faGhost, name: 'ghost', animation: SupportedIconsAnimations.Flip },
+    {
+      icon: faSpinner,
+      name: 'spinner',
+      animation: SupportedIconsAnimations.Spin,
+    },
+    {
+      icon: faLock,
+      name: 'spinner',
+      animation: SupportedIconsAnimations.Shake,
+    },
   ];
 
   return (
     <MainStyled>
-      <Title onClick={() => copyToClipboard(title)}>
-        <Typography variant='h3'>{firstLetterUppercase(title)}</Typography>
-      </Title>
+      <TitleContainer onClick={() => copyToClipboard(title)}>
+        <Text size={SupportedSizes.XL}>{firstLetterUppercase(title)}</Text>
+      </TitleContainer>
       <IconsContainer>
         {icons.map(({ icon, name, animation }, index) => (
           <Link to={`/detail/${name}`} key={index}>
-            <FontAwesomeIcon icon={icon} className={`fa-${animation}`} />
+            <Icon
+              color={SupportedColors.Primary}
+              size={SupportedSizes.XL}
+              icon={icon}
+              animation={animation}
+            />
           </Link>
         ))}
         <br />
         <Link to='/lorem ipsum'>
-          <FontAwesomeIcon icon={fa4} />
-          <FontAwesomeIcon icon={fa0} />
-          <FontAwesomeIcon icon={fa4} />
+          <Icon
+            color={SupportedColors.Primary}
+            size={SupportedSizes.XL}
+            icon={fa4}
+          />
+          <Icon
+            color={SupportedColors.Primary}
+            size={SupportedSizes.XL}
+            icon={fa0}
+          />
+          <Icon
+            color={SupportedColors.Primary}
+            size={SupportedSizes.XL}
+            icon={fa4}
+          />
         </Link>
       </IconsContainer>
     </MainStyled>

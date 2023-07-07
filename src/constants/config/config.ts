@@ -9,12 +9,6 @@ const BRANDING = {
 };
 
 const BASIC_COLORS = {
-  primary: {
-    main: '#313bac',
-  },
-  secondary: {
-    main: '#f50057',
-  },
   white: {
     main: '#ffffff',
   },
@@ -64,36 +58,38 @@ export default {
     light: {
       palette: {
         ...BASIC_COLORS,
-        header: {
-          main: 'hsla(0,0%,100%,.25)',
-          border: 'hsla(0,0%,100%,.18);',
+        primary: {
+          main: '#3949ab',
         },
-        body: {
-          main: '#edf2f8;',
-        },
-        card: {
-          main: '#ffffff',
-        },
-        typhography: {
+        default: {
           main: '#030303',
+          background1: '#edf2f8',
+          background2: '#ffffff',
+        },
+        elements: {
+          header: {
+            main: 'hsla(0,0%,100%,.25)',
+            border: 'hsla(0,0%,100%,.18)',
+          },
         },
       },
     },
     dark: {
       palette: {
         ...BASIC_COLORS,
-        header: {
-          main: 'rgba(0, 0, 0, 0.25)',
-          border: 'hsla(0, 0%, 5%, 0.18)',
+        primary: {
+          main: '#5c6bc0',
         },
-        body: {
-          main: '#191624',
-        },
-        card: {
-          main: '#0b0c18',
-        },
-        typhography: {
+        default: {
           main: '#edf2f8',
+          background1: '#191624',
+          background2: '#0b0c18',
+        },
+        elements: {
+          header: {
+            main: 'rgba(0, 0, 0, 0.25)',
+            border: 'hsla(0, 0%, 5%, 0.18)',
+          },
         },
       },
     },

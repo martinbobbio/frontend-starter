@@ -27,7 +27,7 @@ const Icon = ({
   icon,
   animation,
   size = SupportedSizes.MD,
-  color = SupportedColors.Typography,
+  color = SupportedColors.Default,
 }: IconProps) => {
   return (
     <IconStyled className='icon' _color={color} _size={size} data-testid='Icon'>

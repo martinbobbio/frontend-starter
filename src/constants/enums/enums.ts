@@ -11,8 +11,7 @@ export enum SupportedPages {
 
 export enum SupportedColors {
   Primary = 'primary',
-  Secondary = 'secondary',
-  Typography = 'typhography',
+  Default = 'default',
 }
 
 export enum SupportedSizes {

@@ -2,21 +2,24 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // Components
 import { Detail, Home, NotFound } from '@/views';
-import { AppWrapper, Disclaimer, Header } from '@/components';
+import { AppWrapper } from '@/components';
 // Contexts
 import { GlobalProvider } from '@/contexts';
 // Constants
 import { SupportedPages } from '@/constants';
 
-function App() {
+/**
+ * Functional component that render the router and wrap the application.
+ *
+ * @return React.ReactElement <Main/>
+ */
+const App = () => {
+  /**
+   * Functional component that wrap the views and add logics.
+   *
+   */
   const wrapApplication = (view: React.ReactNode) => {
-    return (
-      <AppWrapper>
-        <Header />
-        <Disclaimer />
-        {view}
-      </AppWrapper>
-    );
+    return <AppWrapper>{view}</AppWrapper>;
   };
 
   return (
@@ -39,6 +42,6 @@ function App() {
       </GlobalProvider>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

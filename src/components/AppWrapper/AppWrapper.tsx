@@ -1,6 +1,8 @@
+// Components
+import { Disclaimer, Footer, Header } from '..';
+import { ThemeWrapper } from './components';
 // Styled components
 import { AppWrapperStyled } from './AppWrapper.styled';
-import { ThemeWrapper } from './components';
 
 // Component props
 interface AppWrapperProps {
@@ -15,7 +17,12 @@ interface AppWrapperProps {
 const AppWrapper = ({ children }: AppWrapperProps) => {
   return (
     <AppWrapperStyled data-testid='AppWrapper'>
-      <ThemeWrapper>{children}</ThemeWrapper>
+      <ThemeWrapper>
+        <Header />
+        <Disclaimer />
+        {children}
+        <Footer />
+      </ThemeWrapper>
     </AppWrapperStyled>
   );
 };

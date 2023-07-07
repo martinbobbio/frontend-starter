@@ -6,8 +6,9 @@ export const HeaderStyled = styled.div`
   height: 64px;
   width: 100%;
   top: 0;
-  background: ${({ theme }) => theme.palette.header.main};
-  border-bottom: 1px solid ${({ theme }) => theme.palette.header.border};
+  background: ${({ theme }) => theme.palette.elements.header.main};
+  border-bottom: 1px solid
+    ${({ theme }) => theme.palette.elements.header.border};
   display: flex;
   justify-content: space-between;
   backdrop-filter: blur(4px);

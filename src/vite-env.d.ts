@@ -20,18 +20,16 @@ interface MyTheme {
     gray: {
       main: string;
     };
-    header: {
-      main: string;
-      border: string;
+    elements: {
+      header: {
+        main: string;
+        border: string;
+      };
     };
-    body: {
+    default: {
       main: string;
-    };
-    card: {
-      main: string;
-    };
-    typhography: {
-      main: string;
+      background1: string;
+      background2: string;
     };
   };
 }

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // Hooks
 import { useGlobalContext } from '@/hooks';
 // Constants
-import { CONFIG, SupportedPages } from '@/constants';
+import { CONFIG, SupportedPages, SupportedWeights } from '@/constants';
 // Styled components
 import {
   ButtonsContainer,
@@ -34,7 +34,7 @@ const Header = () => {
           <ButtonsContainer>
             <Button>
               <Link to={SupportedPages.Home}>
-                <Text>Home</Text>
+                <Text fontWeight={SupportedWeights.Medium}>Home</Text>
               </Link>
             </Button>
           </ButtonsContainer>

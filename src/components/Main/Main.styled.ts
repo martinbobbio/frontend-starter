@@ -14,7 +14,7 @@ export const TitleContainer = styled.div`
 `;
 
 export const IconsContainer = styled.div`
-  background: ${({ theme }) => theme.palette.header.border};
+  background: ${({ theme }) => theme.palette.default.background2};
   box-shadow: ${CONFIG.theme.boxShadow.medium};
   border-radius: 8px;
   padding: 12px 24px;

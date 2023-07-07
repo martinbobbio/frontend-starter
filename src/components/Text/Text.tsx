@@ -19,8 +19,8 @@ interface TextProps {
 const Text = ({
   children,
   size = SupportedSizes.MD,
-  fontWeight = SupportedWeights.Medium,
-  color = SupportedColors.Typography,
+  fontWeight = SupportedWeights.Low,
+  color = SupportedColors.Default,
 }: TextProps) => {
   return (
     <TextStyled

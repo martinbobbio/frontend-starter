@@ -7,6 +7,7 @@ import {
   SupportedColors,
   SupportedIconsAnimations,
   SupportedSizes,
+  SupportedWeights,
 } from '@/constants';
 // Hooks
 import { useCopyToClipboard } from '@/hooks';
@@ -35,7 +36,7 @@ interface MainProps {
  *
  * @return React.ReactElement <Main/>
  */
-function Main({ title }: MainProps) {
+const Main = ({ title }: MainProps) => {
   const { copyToClipboard } = useCopyToClipboard();
 
   const icons = [
@@ -57,7 +58,9 @@ function Main({ title }: MainProps) {
   return (
     <MainStyled>
       <TitleContainer onClick={() => copyToClipboard(title)}>
-        <Text size={SupportedSizes.XL}>{firstLetterUppercase(title)}</Text>
+        <Text fontWeight={SupportedWeights.Medium} size={SupportedSizes.XL}>
+          {firstLetterUppercase(title)}
+        </Text>
       </TitleContainer>
       <IconsContainer>
         {icons.map(({ icon, name, animation }, index) => (
@@ -91,6 +94,6 @@ function Main({ title }: MainProps) {
       </IconsContainer>
     </MainStyled>
   );
-}
+};
 
 export default Main;

@@ -1,5 +1,4 @@
-// Styled components
-import { SEOWrapperStyled } from './SEOWrapper.styled';
+// Libreries
 import { Helmet } from 'react-helmet';
 
 // Component props
@@ -8,19 +7,19 @@ interface SEOWrapperProps {
 }
 
 /**
- * Functional component that render component seo wrapper with their logic.
+ * Functional component that render high order component seo with their logic.
  *
  * @return React.ReactElement <SEOWrapper/>
  */
 const SEOWrapper = ({ children }: SEOWrapperProps) => {
   return (
-    <SEOWrapperStyled data-testid='SEOWrapper'>
+    <>
       <Helmet>
         <title>Frontend Starter</title>
         <meta name='description' content='Descripción de la página' />
       </Helmet>
       {children}
-    </SEOWrapperStyled>
+    </>
   );
 };
 

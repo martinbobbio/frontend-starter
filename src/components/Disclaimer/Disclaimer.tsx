@@ -19,7 +19,7 @@ interface DisclaimerProps {
  */
 const Disclaimer = ({ title }: DisclaimerProps) => {
   return (
-    <DisclaimerStyled data-testid='Disclaimer'>
+    <DisclaimerStyled>
       <a href='https://vitejs.dev' target='_blank'>
         <img src={brandingVite} />
       </a>

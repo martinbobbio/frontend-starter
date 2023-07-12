@@ -1,5 +1,3 @@
-// Styled components
-import { ThemeWrapperStyled } from './ThemeWrapper.styled';
 // Constants
 import { CONFIG } from '@/constants';
 // Hooks
@@ -14,7 +12,7 @@ interface ThemeWrapperProps {
 }
 
 /**
- * Functional component that render component theme wrapper with their logic.
+ * Functional component that render high order component theme with their logic.
  *
  * @return React.ReactElement <ThemeWrapper/>
  */
@@ -23,9 +21,7 @@ const ThemeWrapper = ({ children }: ThemeWrapperProps) => {
   return (
     <ThemeStyledComponents theme={CONFIG.theme[theme]}>
       <ThemeMaterial theme={createTheme(CONFIG.theme[theme])}>
-        <ThemeWrapperStyled data-testid='ThemeWrapper'>
-          {children}
-        </ThemeWrapperStyled>
+        {children}
       </ThemeMaterial>
     </ThemeStyledComponents>
   );

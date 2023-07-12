@@ -26,7 +26,7 @@ const Header = () => {
   const { menu, branding } = CONFIG;
 
   return (
-    <HeaderStyled data-testid='header'>
+    <HeaderStyled>
       <Container>
         <Toolbar>
           <Link to={SupportedPages.Home}>

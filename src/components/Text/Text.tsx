@@ -28,7 +28,6 @@ const Text = ({
       _color={color}
       _size={size}
       _weight={fontWeight}
-      data-testid='Text'
     >
       {children}
     </TextStyled>

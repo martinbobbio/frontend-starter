@@ -1,4 +1,4 @@
 // Libreries
 import { styled } from 'styled-components';
 
-export const DetailStyled = styled.div``;
+export const SEOWrapperStyled = styled.div``;

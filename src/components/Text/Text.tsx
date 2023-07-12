@@ -6,9 +6,9 @@ import { TextStyled } from './Text.styled';
 // Component props
 interface TextProps {
   children: React.ReactNode;
-  size?: SupportedSizes;
-  fontWeight?: SupportedWeights;
-  color?: SupportedColors;
+  size?: `${SupportedSizes}`;
+  fontWeight?: `${SupportedWeights}`;
+  color?: `${SupportedColors}`;
 }
 
 /**
@@ -18,9 +18,9 @@ interface TextProps {
  */
 const Text = ({
   children,
-  size = SupportedSizes.MD,
-  fontWeight = SupportedWeights.Low,
-  color = SupportedColors.Default,
+  size = 'md',
+  fontWeight = 'medium',
+  color = 'default',
 }: TextProps) => {
   return (
     <TextStyled

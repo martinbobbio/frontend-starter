@@ -1,7 +1,7 @@
 // React
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // Components
-import { Detail, Home, NotFound } from '@/views';
+import { FAIcons, FAIconsDetail, Home, NotFound } from '@/views';
 import { AppWrapper } from '@/components';
 // Contexts
 import { GlobalProvider } from '@/contexts';
@@ -31,8 +31,20 @@ const App = () => {
             element={wrapApplication(<Home />)}
           />
           <Route
-            path={SupportedPages.Detail}
-            element={wrapApplication(<Detail />)}
+            path={SupportedPages.Components}
+            element={wrapApplication(<Home />)}
+          />
+          <Route
+            path={SupportedPages.FAIcons}
+            element={wrapApplication(<FAIcons />)}
+          />
+          <Route
+            path={SupportedPages.FAIconsDetail}
+            element={wrapApplication(<FAIconsDetail />)}
+          />
+          <Route
+            path={SupportedPages.AxiosAndSWR}
+            element={wrapApplication(<Home />)}
           />
           <Route
             path={SupportedPages.NotFound}

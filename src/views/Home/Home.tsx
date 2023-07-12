@@ -1,14 +1,22 @@
 // Components
-import { Main } from '@/components';
+import { Disclaimer } from '@/components';
 // Styled components
 import { HomeStyled } from './Home.styled';
 
-function Home() {
+/**
+ * Functional component that render component home.
+ *
+ * @return React.ReactElement <Home/>
+ */
+const Home = () => {
+  const disclaimer = {
+    title: `Frontend Starter`,
+  };
   return (
     <HomeStyled>
-      <Main title='Frontend Starter' />
+      <Disclaimer title={disclaimer.title} />
     </HomeStyled>
   );
-}
+};
 
 export default Home;

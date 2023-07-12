@@ -4,4 +4,10 @@ import { styled } from 'styled-components';
 export const ThemeWrapperStyled = styled.div`
   background: ${({ theme }) => theme.palette.default.background1};
   min-height: 100vh;
+  .box {
+    background: ${({ theme }) => theme.palette.default.background2};
+    box-shadow: ${({ theme }) => theme.boxShadow.medium};
+    border-radius: 8px;
+    padding: 24px;
+  }
 `;

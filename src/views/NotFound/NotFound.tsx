@@ -1,14 +1,22 @@
 // Components
-import { Main } from '@/components';
+import { Disclaimer } from '@/components';
 // Styled components
 import { NotFoundStyled } from './NotFound.styled';
 
-function NotFound() {
+/**
+ * Functional component that render component not found.
+ *
+ * @return React.ReactElement <NotFound/>
+ */
+const NotFound = () => {
+  const disclaimer = {
+    title: `Frontend Starter - Not Found`,
+  };
   return (
     <NotFoundStyled>
-      <Main title='Not Found' />
+      <Disclaimer title={disclaimer.title} />
     </NotFoundStyled>
   );
-}
+};
 
 export default NotFound;

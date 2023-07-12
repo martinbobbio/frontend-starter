@@ -14,7 +14,7 @@ interface ThemeWrapperProps {
 }
 
 /**
- * Functional component that render component app wrapper with their logic.
+ * Functional component that render component theme wrapper with their logic.
  *
  * @return React.ReactElement <ThemeWrapper/>
  */

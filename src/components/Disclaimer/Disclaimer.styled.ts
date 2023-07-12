@@ -14,3 +14,7 @@ export const DisclaimerStyled = styled.div`
     filter: drop-shadow(0 0 32px ${({ theme }) => theme.palette.primary.main});
   }
 `;
+
+export const TitleContainer = styled.div`
+  margin: 12px 0 24px 0;
+`;

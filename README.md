@@ -2,14 +2,30 @@
 
 ViteJS + React-Typescript
 
-- Styled components (Global Style and Theme)
-- Dark/Light Mode
-- ViteJS Aliases
-- MUI Material for components
-- React Router
-- Font Awesome icons
-- ESLint + Prettier
-- SWR
-- Router
-- Contexts
-- Custom components to start
+- ViteJS:
+  -- Alias
+  -- Environment vars
+
+- React:
+  -- Router
+  -- Context
+
+- Libreries:
+  -- MUI Material
+  -- Font Awesome
+  -- SWR
+  -- Axios
+  -- React Helmet
+
+- Content:
+  -- Dark/Light Mode
+  -- Design review
+  -- Components ready to use
+
+- Configs for development:
+  -- Eslint
+  -- Prettier
+
+- Design patterns:
+  -- Principies SOLID
+  -- Adapters

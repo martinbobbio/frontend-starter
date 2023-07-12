@@ -1,6 +1,6 @@
 // Components
-import { Disclaimer, Footer, Header } from '..';
-import { ThemeWrapper } from './components';
+import { Footer, Header } from '..';
+import { SEOWrapper, FetchWrapper, ThemeWrapper } from './components';
 // Styled components
 import { AppWrapperStyled } from './AppWrapper.styled';
 
@@ -17,12 +17,15 @@ interface AppWrapperProps {
 const AppWrapper = ({ children }: AppWrapperProps) => {
   return (
     <AppWrapperStyled data-testid='AppWrapper'>
-      <ThemeWrapper>
-        <Header />
-        <Disclaimer />
-        {children}
-        <Footer />
-      </ThemeWrapper>
+      <SEOWrapper>
+        <ThemeWrapper>
+          <FetchWrapper>
+            <Header />
+            {children}
+            <Footer />
+          </FetchWrapper>
+        </ThemeWrapper>
+      </SEOWrapper>
     </AppWrapperStyled>
   );
 };

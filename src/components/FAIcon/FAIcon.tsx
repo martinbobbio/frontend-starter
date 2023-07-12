@@ -5,7 +5,7 @@ import {
   SupportedSizes,
 } from '@/constants';
 // Styled components
-import { IconStyled } from './Icon.styled';
+import { FAIconStyled } from './FAIcon.styled';
 // Libreries
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
@@ -13,27 +13,32 @@ import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 // Component props
 interface IconProps {
   icon: IconDefinition;
-  animation?: SupportedIconsAnimations;
-  size?: SupportedSizes;
-  color?: SupportedColors;
+  animation?: `${SupportedIconsAnimations}`;
+  size?: `${SupportedSizes}`;
+  color?: `${SupportedColors}`;
 }
 
 /**
- * Functional component that render component icon.
+ * Functional component that render component font awesome icon.
  *
- * @return React.ReactElement <Icon/>
+ * @return React.ReactElement <FAIcon/>
  */
-const Icon = ({
+const FAIcon = ({
   icon,
   animation,
-  size = SupportedSizes.MD,
-  color = SupportedColors.Default,
+  size = 'md',
+  color = 'default',
 }: IconProps) => {
   return (
-    <IconStyled className='icon' _color={color} _size={size} data-testid='Icon'>
+    <FAIconStyled
+      className='icon'
+      _color={color}
+      _size={size}
+      data-testid='Icon'
+    >
       <FontAwesomeIcon icon={icon} className={`fa-${animation}`} />
-    </IconStyled>
+    </FAIconStyled>
   );
 };
 
-export default Icon;
+export default FAIcon;

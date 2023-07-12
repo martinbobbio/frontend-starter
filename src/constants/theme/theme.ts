@@ -1,21 +1,3 @@
-// Assets
-import { logoMBDark, logoMBLight } from '@/assets';
-// Constants
-import { SupportedPages } from '@/constants';
-
-const BRANDING = {
-  logo: {
-    light: logoMBLight,
-    dark: logoMBDark,
-  },
-};
-const MENU = [
-  { value: 'Home', redirect: SupportedPages.Home },
-  { value: 'Components', redirect: SupportedPages.Components },
-  { value: 'FA Icons', redirect: SupportedPages.FAIcons },
-  { value: 'Axios + SWR', redirect: SupportedPages.AxiosAndSWR },
-];
-
 const BASIC_COLORS = {
   white: {
     main: '#ffffff',
@@ -64,8 +46,6 @@ const BASIC_PROPS = {
 };
 
 export default {
-  branding: BRANDING,
-  menu: MENU,
   theme: {
     fontSize: FONT_SIZES,
     lineHeight: LINE_HEIGHTS,

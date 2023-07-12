@@ -2,6 +2,7 @@
 import { useContext } from 'react';
 // Hooks
 import { GlobalContext } from '@/contexts';
+// Constants
 import { SupportedThemes } from '@/constants';
 
 /**

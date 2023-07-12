@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 // Hooks
 import { useGlobalContext } from '@/hooks';
 // Constants
-import { CONFIG, SupportedPages, SupportedWeights } from '@/constants';
+import { CONFIG, SupportedPages } from '@/constants';
 // Styled components
 import {
   ButtonsContainer,
@@ -14,7 +14,7 @@ import {
 // Libreries
 import { Toolbar, Container, Button } from '@mui/material';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
-import { Icon, Text } from '..';
+import { FAIcon, Text } from '..';
 
 /**
  * Functional component that render component header.
@@ -23,23 +23,28 @@ import { Icon, Text } from '..';
  */
 const Header = () => {
   const { theme, toggleTheme } = useGlobalContext();
+  const { menu, branding } = CONFIG;
 
   return (
     <HeaderStyled data-testid='header'>
       <Container>
         <Toolbar>
           <Link to={SupportedPages.Home}>
-            <Logo src={CONFIG.branding.logo[theme]} />
+            <Logo src={branding.logo[theme]} />
           </Link>
           <ButtonsContainer>
-            <Button>
-              <Link to={SupportedPages.Home}>
-                <Text fontWeight={SupportedWeights.Medium}>Home</Text>
-              </Link>
-            </Button>
+            {menu.map((item, i) => (
+              <Button key={i}>
+                <Link to={item.redirect}>
+                  <Text size='sm' fontWeight='medium'>
+                    {item.value}
+                  </Text>
+                </Link>
+              </Button>
+            ))}
           </ButtonsContainer>
           <ThemeButton onClick={() => toggleTheme()}>
-            <Icon icon={faLightbulb} />
+            <FAIcon icon={faLightbulb} />
           </ThemeButton>
         </Toolbar>
       </Container>

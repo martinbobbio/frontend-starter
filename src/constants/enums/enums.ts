@@ -5,7 +5,10 @@ export enum SupportedThemes {
 
 export enum SupportedPages {
   Home = '/',
-  Detail = '/detail/:id',
+  FAIcons = '/fa-icons',
+  FAIconsDetail = '/fa-icons/:id',
+  Components = '/components',
+  AxiosAndSWR = '/axios-swr',
   NotFound = '*',
 }
 

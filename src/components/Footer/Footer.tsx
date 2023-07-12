@@ -1,7 +1,6 @@
 // Components
 import { Text } from '..';
 // Constants
-import { SupportedWeights } from '@/constants';
 import { version } from '../../../package.json';
 // Styled components
 import { FooterStyled } from './Footer.styled';
@@ -14,15 +13,9 @@ import { FooterStyled } from './Footer.styled';
 const Footer = () => {
   return (
     <FooterStyled>
-      <Text fontWeight={SupportedWeights.Medium}>
-        Frontend Starter v{version}
-      </Text>
-      <Text fontWeight={SupportedWeights.Medium}>
-        Powered by React and ViteJS
-      </Text>
-      <Text fontWeight={SupportedWeights.Medium}>
-        Developed by Martin Bobbio
-      </Text>
+      <Text fontWeight='medium'>Frontend Starter v{version}</Text>
+      <Text fontWeight='medium'>Powered by React and ViteJS</Text>
+      <Text fontWeight='medium'>Developed by Martin Bobbio</Text>
     </FooterStyled>
   );
 };

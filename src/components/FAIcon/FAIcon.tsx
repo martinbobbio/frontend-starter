@@ -1,16 +1,12 @@
-// Constants
 import {
   SupportedColors,
   SupportedIconsAnimations,
   SupportedSizes,
 } from '@/constants';
-// Styled components
 import { FAIconStyled } from './FAIcon.styled';
-// Libreries
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
-// Component props
 interface IconProps {
   icon: IconDefinition;
   animation?: `${SupportedIconsAnimations}`;

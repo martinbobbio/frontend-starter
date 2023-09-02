@@ -1,6 +1,4 @@
-// React
 import { createContext, Dispatch, useReducer } from 'react';
-// State
 import { Action, GlobalState, initialGlobalState } from './GlobalState';
 import { globalReducer } from './GlobalReducer';
 

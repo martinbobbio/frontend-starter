@@ -1,7 +1,5 @@
-// Libreries
 import { Helmet } from 'react-helmet';
 
-// Component props
 interface SEOWrapperProps {
   children: React.ReactNode;
 }

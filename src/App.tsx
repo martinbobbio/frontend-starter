@@ -1,6 +1,4 @@
-// Components
 import { Footer, Header } from '@/components';
-// Styled components
 import { AppStyled } from './App.styled';
 
 interface AppProps {

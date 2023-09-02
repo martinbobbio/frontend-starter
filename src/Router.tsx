@@ -1,9 +1,6 @@
-// React
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// Components
 import { FAIcons, FAIconsDetail, Home, NotFound } from '@/views';
 import App from '@/App';
-// Constants
 import { SupportedPages } from '@/constants';
 
 /**

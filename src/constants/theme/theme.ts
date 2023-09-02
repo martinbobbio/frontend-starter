@@ -46,48 +46,42 @@ const BASIC_PROPS = {
 };
 
 export default {
-  theme: {
-    fontSize: FONT_SIZES,
-    lineHeight: LINE_HEIGHTS,
-    fontWeight: FONT_WEIGHTS,
-    boxShadow: BOX_SHADOWS,
-    light: {
-      ...BASIC_PROPS,
-      palette: {
-        ...BASIC_COLORS,
-        primary: {
-          main: '#5c6bc0',
-        },
-        default: {
-          main: '#030303',
-          background1: '#edf2f8',
-          background2: '#ffffff',
-        },
-        elements: {
-          header: {
-            main: 'hsla(0,0%,100%,.25)',
-            border: 'hsla(0,0%,100%,.18)',
-          },
+  light: {
+    ...BASIC_PROPS,
+    palette: {
+      ...BASIC_COLORS,
+      primary: {
+        main: '#5c6bc0',
+      },
+      default: {
+        main: '#030303',
+        background1: '#edf2f8',
+        background2: '#ffffff',
+      },
+      elements: {
+        header: {
+          main: 'hsla(0,0%,100%,.25)',
+          border: 'hsla(0,0%,100%,.18)',
         },
       },
     },
-    dark: {
-      ...BASIC_PROPS,
-      palette: {
-        ...BASIC_COLORS,
-        primary: {
-          main: '#3949ab',
-        },
-        default: {
-          main: '#edf2f8',
-          background1: '#191624',
-          background2: '#0b0c18',
-        },
-        elements: {
-          header: {
-            main: 'rgba(0, 0, 0, 0.25)',
-            border: 'hsla(0, 0%, 5%, 0.18)',
-          },
+  },
+  dark: {
+    ...BASIC_PROPS,
+    palette: {
+      ...BASIC_COLORS,
+      primary: {
+        main: '#3949ab',
+      },
+      default: {
+        main: '#edf2f8',
+        background1: '#191624',
+        background2: '#0b0c18',
+      },
+      elements: {
+        header: {
+          main: 'rgba(0, 0, 0, 0.25)',
+          border: 'hsla(0, 0%, 5%, 0.18)',
         },
       },
     },

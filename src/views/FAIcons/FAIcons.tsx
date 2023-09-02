@@ -1,13 +1,8 @@
 import { Link } from 'react-router-dom';
-// Components
 import { Disclaimer, FAIcon } from '@/components';
-// Constants
 import { SupportedIconsAnimations, SupportedPages } from '@/constants';
-// Hooks
 import { useCopyToClipboard } from '@/hooks';
-// Styled components
 import { FAIconsStyled, IconsContainer } from './FAIcons.styled';
-// Libreries
 import {
   fa0,
   fa4,

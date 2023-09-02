@@ -1,8 +1,3 @@
-export enum SupportedThemes {
-  Light = 'light',
-  Dark = 'dark',
-}
-
 export enum SupportedPages {
   Home = '/',
   FAIcons = '/fa-icons',

@@ -1,6 +1,4 @@
-// Constants
 import { SupportedColors, SupportedSizes, SupportedWeights } from '@/constants';
-// Libreries
 import { Typography } from '@mui/material';
 import { styled } from 'styled-components';
 

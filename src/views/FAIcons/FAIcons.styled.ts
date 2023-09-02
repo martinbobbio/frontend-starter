@@ -1,4 +1,3 @@
-// Libreries
 import { styled } from 'styled-components';
 
 export const FAIconsStyled = styled.div``;

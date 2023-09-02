@@ -1,6 +1,4 @@
-// Components
 import { Disclaimer } from '@/components';
-// Styled components
 import { HomeStyled } from './Home.styled';
 
 /**

@@ -1,9 +1,6 @@
-// Constants
 import { SupportedColors, SupportedSizes, SupportedWeights } from '@/constants';
-// Styled components
 import { TextStyled } from './Text.styled';
 
-// Component props
 interface TextProps {
   children: React.ReactNode;
   size?: `${SupportedSizes}`;

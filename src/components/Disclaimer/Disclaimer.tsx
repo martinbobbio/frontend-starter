@@ -1,13 +1,8 @@
-// Assets
 import { brandingReact, brandingVite } from '@/assets';
-// Components
 import { Text } from '@/components';
-// Utils
 import { firstLetterUppercase } from '@/utils';
-// Styled components
 import { DisclaimerStyled, TitleContainer } from './Disclaimer.styled';
 
-// Component props
 interface DisclaimerProps {
   title: string;
 }

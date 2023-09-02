@@ -1,20 +1,16 @@
-// React
 import { Link } from 'react-router-dom';
-// Hooks
-import { useGlobalContext } from '@/hooks';
-// Constants
+import { logoMBDark, logoMBLight } from '@/assets';
 import { CONFIG, SupportedPages } from '@/constants';
-// Styled components
+import { FAIcon, Text } from '@/components';
 import {
   ButtonsContainer,
   HeaderStyled,
   Logo,
   ThemeButton,
 } from './Header.styled';
-// Libreries
 import { Toolbar, Container, Button } from '@mui/material';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
-import { FAIcon, Text } from '..';
+import { useDarkMode } from 'usehooks-ts';
 
 /**
  * Functional component that render component header.
@@ -22,15 +18,16 @@ import { FAIcon, Text } from '..';
  * @return React.ReactElement <Header/>
  */
 const Header = () => {
-  const { theme, toggleTheme } = useGlobalContext();
-  const { menu, branding } = CONFIG;
+  const { toggle, isDarkMode } = useDarkMode();
+  const { menu } = CONFIG;
+  const logo = isDarkMode ? logoMBDark : logoMBLight;
 
   return (
     <HeaderStyled>
       <Container>
         <Toolbar>
           <Link to={SupportedPages.Home}>
-            <Logo src={branding.logo[theme]} />
+            <Logo src={logo} />
           </Link>
           <ButtonsContainer>
             {menu.map((item, i) => (
@@ -43,7 +40,7 @@ const Header = () => {
               </Button>
             ))}
           </ButtonsContainer>
-          <ThemeButton onClick={() => toggleTheme()}>
+          <ThemeButton onClick={() => toggle()}>
             <FAIcon icon={faLightbulb} />
           </ThemeButton>
         </Toolbar>

@@ -1,6 +1,4 @@
-// Constants
 import { API } from '@/constants';
-// Libreries
 import useSWR from 'swr';
 import { AxiosRequestConfig, AxiosResponse } from 'axios';
 

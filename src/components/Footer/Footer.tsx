@@ -1,9 +1,15 @@
-// Components
-import { Text } from '..';
-// Constants
+import { Text } from '@/components';
+import { logoMBDark, logoMBLight } from '@/assets';
+import { CONFIG } from '@/constants';
 import { version } from '../../../package.json';
-// Styled components
-import { FooterStyled } from './Footer.styled';
+import {
+  ContentText,
+  ExternalLink,
+  FooterLogo,
+  FooterStyled,
+} from './Footer.styled';
+import { Grid } from '@mui/material';
+import { useDarkMode } from 'usehooks-ts';
 
 /**
  * Functional component that render component footer.
@@ -11,11 +17,49 @@ import { FooterStyled } from './Footer.styled';
  * @return React.ReactElement <Footer/>
  */
 const Footer = () => {
+  const { isDarkMode } = useDarkMode();
+  const logo = isDarkMode ? logoMBDark : logoMBLight;
+
   return (
     <FooterStyled>
-      <Text fontWeight='medium'>Frontend Starter v{version}</Text>
-      <Text fontWeight='medium'>Powered by React and ViteJS</Text>
-      <Text fontWeight='medium'>Developed by Martin Bobbio</Text>
+      <Grid container justifyContent='center' spacing={2}>
+        <Grid item xs={12} sm={2}>
+          <FooterLogo src={logo} />
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <ContentText>
+            <Text fontWeight='medium'>
+              Frontend Starter{' '}
+              <ExternalLink
+                target='_blank'
+                href={`${CONFIG.sites.githubVersion}${version}`}
+                color='inherit'
+              >
+                v{version}
+              </ExternalLink>
+            </Text>
+            <Text fontWeight='medium'>
+              Powered by{' '}
+              <ExternalLink
+                target='_blank'
+                href={CONFIG.sites.react}
+                color='inherit'
+              >
+                React
+              </ExternalLink>{' '}
+              and{' '}
+              <ExternalLink
+                target='_blank'
+                href={CONFIG.sites.vite}
+                color='inherit'
+              >
+                ViteJS
+              </ExternalLink>
+            </Text>
+            <Text fontWeight='medium'>Developed by Martin Bobbio</Text>
+          </ContentText>
+        </Grid>
+      </Grid>
     </FooterStyled>
   );
 };

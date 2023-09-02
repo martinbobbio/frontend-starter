@@ -1,7 +1,5 @@
-// Libreries
 import { SWRConfig, SWRConfiguration } from 'swr';
 
-// Component props
 interface SWRWrapperProps {
   children: React.ReactNode;
 }

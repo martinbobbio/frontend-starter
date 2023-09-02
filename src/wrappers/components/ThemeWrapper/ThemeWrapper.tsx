@@ -1,12 +1,8 @@
-// Constants
 import { CONFIG } from '@/constants';
-// Hooks
-import { useGlobalContext } from '@/hooks';
-// Libreries
 import { ThemeProvider as ThemeStyledComponents } from 'styled-components';
 import { createTheme, ThemeProvider as ThemeMaterial } from '@mui/material';
+import { useDarkMode } from 'usehooks-ts';
 
-// Component props
 interface ThemeWrapperProps {
   children: React.ReactNode;
 }
@@ -17,12 +13,11 @@ interface ThemeWrapperProps {
  * @return React.ReactElement <ThemeWrapper/>
  */
 const ThemeWrapper = ({ children }: ThemeWrapperProps) => {
-  const { theme } = useGlobalContext();
+  const { isDarkMode } = useDarkMode();
+  const theme = isDarkMode ? CONFIG.theme.dark : CONFIG.theme.light;
   return (
-    <ThemeStyledComponents theme={CONFIG.theme[theme]}>
-      <ThemeMaterial theme={createTheme(CONFIG.theme[theme])}>
-        {children}
-      </ThemeMaterial>
+    <ThemeStyledComponents theme={theme}>
+      <ThemeMaterial theme={createTheme(theme)}>{children}</ThemeMaterial>
     </ThemeStyledComponents>
   );
 };

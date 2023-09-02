@@ -1,8 +1,5 @@
-// React
 import { useParams } from 'react-router-dom';
-// Components
 import { Disclaimer } from '@/components';
-// Styled components
 import { FAIconsDetailStyled } from './FAIconsDetail.styled';
 
 /**

@@ -1,6 +1,4 @@
-// Components
 import { Disclaimer } from '@/components';
-// Styled components
 import { NotFoundStyled } from './NotFound.styled';
 
 /**

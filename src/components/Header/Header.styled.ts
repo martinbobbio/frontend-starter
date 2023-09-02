@@ -1,4 +1,3 @@
-// Libreries
 import { Button } from '@mui/material';
 import { styled } from 'styled-components';
 

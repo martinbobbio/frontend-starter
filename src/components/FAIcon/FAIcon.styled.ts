@@ -1,6 +1,4 @@
-// Constants
 import { SupportedColors, SupportedSizes } from '@/constants';
-// Libreries
 import { styled } from 'styled-components';
 
 interface IconStyledProps {
